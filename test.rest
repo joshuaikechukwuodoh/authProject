@@ -1,0 +1,43 @@
+### Register a new user
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Joshua Smith",
+  "email": "odohjoshuaikechi@gmail.com",
+  "password": "testpassword123"
+}
+
+### Login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "odohjoshuaikechi@gmail.com",
+  "password": "testpassword123"
+}
+
+### Verify Email
+POST http://localhost:3000/api/auth/verify
+Content-Type: application/json
+
+{
+  "email": "odohjoshuaikechi@gmail.com",
+  "verificationToken": "210990"
+}
+
+### Forgot Password
+POST http://localhost:3000/api/auth/forgot-password
+Content-Type: application/json
+
+{
+  "email": "odohjoshuaikechi@gmail.com"
+}
+
+### Reset Password
+POST http://localhost:3000/api/auth/reset-password/210990
+Content-Type: application/json
+
+{
+  "password": "newpassword"
+}
